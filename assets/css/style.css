@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+h1{
+    color: orange;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20vh;
+}
+.indiquateurFrais{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    padding-top: 20px;
+    color: gray;
+}
+.frais{
+    color: green;
+    font-size: 30px;
+    padding-left: 10px;
+}
+section{
+    display: flex;
+    width: 100vw;
+    padding-top: 30px;
+}
+.imageCard, .formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+.imageCard{
+    position: relative;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/recto.png") no-repeat;
+    background-size: 90%;
+    margin-left: 100px;
+}
+
+/* flip card animation verso */
+.flip{
+    background: url("../images/verso.png") no-repeat;
+    background-size: 90%;
+    margin-right: 150px;
+    -webkit-animation: flip-vertical-right 0.5s ease-in-out both;
+    animation: flip-vertical-right 0.5s ease-in-out both;
+}
+@-webkit-keyframes flip-vertical-right {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+@keyframes flip-vertical-right {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+
+/* flip card animation recto */
+.flipOut{
+    -webkit-animation: recto 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
+        animation: recto 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
+}
+@-webkit-keyframes recto {
+    0% {
+        -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    }
+
+    100% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+}
+@keyframes recto {
+    0% {
+        -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    }
+
+    100% {
+        -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    }
+}
+
+/* gestion du formulaire */
+input{
+    border: 2px solid grey;
+    border-radius: 8px;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.input1 input, .input2 input{
+    width: 45vw;
+}
+.formPart2{
+    position: relative;
+    width: 100%;
+}
+.formPart2{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.input3, .input4{
+    width: 50%;
+}
+.input3 input,
+.input4 input {
+    width: 22vw;
+}
+label{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;   
+}
+button{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: 0px;
+    border-radius: 10px;
+    width: 100%;
+    height: 12vh;
+    margin-top: 20px;
+}
+
+/* hide arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* gestion du formulaire above card*/
+.inputCard{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+}
+.inputCard1{
+    position: absolute;
+    width: 80%;
+    top: 45%;
+    font-size: 50px;
+}
+.inputCard2{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    max-width: 50%;
+}
+.inputCard3{
+    position: absolute;
+    width: 20%;
+    top: 75%;
+    left: 70%;
+}
+.inputCard4{
+    position: absolute;
+    display: none;
+    font-size: 30px;
+    top: 32%;
+    width: 20%;
+    left: 80%;
+}

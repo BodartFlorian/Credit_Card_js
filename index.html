@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Paiement par carte de crédit</h1>
+        <div class="indiquateurFrais">
+            <h2>Frais de transaction</h2><p class="frais">0.00€</p>
+        </div>
+    </div>
+    <section>
+        <div id="imageCard" class="imageCard">
+            <div id="card" class="card">
+            </div>
+            <div class="inputCard">
+                <input class="inputCard1" id="inputCard1" type="text" placeholder="•••• •••• •••• ••••" disabled>
+                <input class="inputCard2" id="inputCard2" type="text" disabled>
+                <input class="inputCard3" id="inputCard3" type="text" placeholder="MM / YY" disabled>
+                <input class="inputCard4" id="inputCard4" type="text"disabled>
+            </div>
+            <p>Paiement sécurisé par by HiPay SAS, 256-bit SSL</p>
+        </div>
+        <div class="formulaire">
+            <form action="#">
+                <div class="input1">
+                    <label for="creditCard">Numéro de la carte</label>
+                    <input id="creditCard" type="text" onkeypress='return formats(this,event)' oninput="return numberValidation(event),getValue();" required/>
+                </div>
+                <div class="input2">
+                    <label for="ownerCard">Titulaire de la carte</label>
+                    <input id="ownerCard" type="text" onkeyup="getValue();"required/>
+                </div>
+                <div class="formPart2">
+                    <div class="input3">
+                        <label for="expirationDate">Date d'expiration</label>
+                        <input id="expirationDate" type="text"  onkeyup="getValue();" placeholder="MM / YY" onkeypress='return date(this,event)' required>
+                    </div>
+                    <div class="input4">
+                        <label for="cvc">Cryptogramme</label>
+                        <input id="cvc" type="number" placeholder="CVC" onclick="flip()" onkeyup="getValue();"
+                        required />
+                    </div>
+                </div>
+                <button type="submit">Payer 35.49€</button>
+            </form>
+        </div>
+    </section>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>
