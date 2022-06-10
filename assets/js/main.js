@@ -5,6 +5,7 @@ const inputCard2 = document.querySelector(".inputCard2");
 const inputCard3 = document.querySelector(".inputCard3");
 const inputCard4 = document.querySelector(".inputCard4");
 let cardValue = 0;
+
    
 
 // function for make credit card like ==> XXXX XXXX XXXX XXXX  keypress
@@ -21,15 +22,17 @@ function numberValidation(e){
     return false;
 }
 
-// function date format
-function date(ele,e){
-if(ele.value.length < 7){
-    ele.value= ele.value.replace(/\W/gi, '').replace(/(.{2})/g, '$1 / ');
-    return true;
-}else{
-    return false;
-}}
+// Cleave date input
+let cleaveDate = new Cleave('.input-date', {
+    date: true,
+    datePattern: ['m', 'y']
+});
 
+//Cleave cvc input
+let cleaveCvc = new Cleave('.input-cvc', {
+    blocks: [3],
+    numeral: true,
+});
 
 
 // function flip card recto ==> verso 
