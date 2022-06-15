@@ -37,19 +37,17 @@ let cleaveCvc = new Cleave('.input-cvc', {
 
 // function flip card recto ==> verso 
 function flip(){
-     card.classList.remove("flipOut");
+    card.classList.remove("flipOut");
     card.classList.add("flip");
-      console.log('card flip');
-      inputCard1.style.display = "none";
-      inputCard2.style.display = "none";
-      inputCard3.style.display = "none";
-      inputCard4.style.display = "block";
+    inputCard1.style.display = "none";
+    inputCard2.style.display = "none";
+    inputCard3.style.display = "none";
+    inputCard4.style.display = "block";
     cardValue = 1;
 
     // function flip card reverse
     if (cardValue == 1){
         window.addEventListener('focusout', (event) => {
-            console.log('card return')
             card.classList.remove("flip");
             inputCard1.style.display = "block";
             inputCard2.style.display = "block";

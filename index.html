@@ -31,7 +31,9 @@
             <form action="#">
                 <div class="input1">
                     <label for="creditCard">Numéro de la carte</label>
-                    <input id="creditCard" type="text" onkeypress='return formats(this,event)' oninput="return numberValidation(event),getValue();" required/>
+                    <input id="creditCard" type="text" 
+                    onkeypress='return formats(this,event)' 
+                    oninput="return numberValidation(event),getValue();" required/>
                 </div>
                 <div class="input2">
                     <label for="ownerCard">Titulaire de la carte</label>
@@ -44,7 +46,7 @@
                     </div>
                     <div class="input4">
                         <label for="cvc">Cryptogramme</label>
-                        <input id="cvc" class="input-cvc" type="number" placeholder="CVC" onclick="flip()" onkeyup="getValue();"
+                        <input id="cvc" class="input-cvc" type="number" placeholder="CVC"  onfocus="flip()" onkeyup="getValue();"
                         required />
                     </div>
                 </div>
